@@ -32,7 +32,7 @@ body {
   }
      
   .letter {
-      border: 1px solid black;
+      border: 1px solid rgba(15, 15, 15, 0.849);
       padding: 3px;
       margin: 3px;
       min-width: 20px;
