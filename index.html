@@ -54,5 +54,17 @@
     </div>
 
     <script src="scripts.js"></script>
+    <script>
+        // Nueva función para calcular el presupuesto y mostrar resultados
+        function calculateBudget() {
+          const { destiny, budget, acomodation, transport, food } = getValues();
+  
+          let expenses = parseInt(acomodation) + parseInt(transport) + parseInt(food);
+          let balance = budget - expenses;
+  
+          UI(destiny, budget, balance);
+          balanceColours();
+        }
+    </Script>
   </body>
 </html>
