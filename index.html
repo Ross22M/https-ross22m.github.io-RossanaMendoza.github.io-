@@ -1,70 +1,29 @@
 <!DOCTYPE html>
-<html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Xk-budget</title>
-    <link rel="stylesheet" href="style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
-    />
-    <!-- Compiled and minified JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.13.0/css/all.css"
-      integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V"
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
-  </head>
-  <body>
-    
-    <nav class="navbar blue z-depth-4">
-        <h2>Xk-Presupuesto</h2>
-      </nav>
-  
-      <div class="main">
-        <form id="vacationCalc" action="JavaScript:voi(0);"  method="post">
-          <input type="text" placeholder="Destino" id="destiny" required />
-          <input type="number" placeholder="Presupuesto" id="budget" required />
-          <input
-            type="number"
-            placeholder="Alojamiento"
-            id="acomodation"
-            required
-          />
-          <input type="number" placeholder="Transporte " id="transport" required />
-          <input type="number" placeholder="Comida" id="food" required />
-          <input type="submit" value="Calcular" class="btn blue z-depth-4" title="Calcular presupuesto de vacaciones" />
-        </form>
-      </div>
-
-    <div class="container">
-      <div class="icons">
-        <h5><i class="fas fa-plane"></i></h5>
-        <h5><i class="fas fa-wallet"></i></h5> 
-        <h5><i class="fas fa-money-bill-wave-alt"></i></h5>  
-      </div>
-      
-      <div class="data">
-        <div class="result" id="result"></div>
-      </div>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3 en línea</title>
+</head>
+<body>
+    <div id="turn-display">Turno de: X</div>
+    <div id="score-display">Puntuación - Jugador X: 0 | Jugador O: 0</div>
+    <div class="board" id="board">
+        <div class="cell" data-index="0"></div>
+        <div class="cell" data-index="1"></div>
+        <div class="cell" data-index="2"></div>
+        <div class="cell" data-index="3"></div>
+        <div class="cell" data-index="4"></div>
+        <div class="cell" data-index="5"></div>
+        <div class="cell" data-index="6"></div>
+        <div class="cell" data-index="7"></div>
+        <div class="cell" data-index="8"></div>
     </div>
-
-    <script src="scripts.js"></script>
-    <script>
-        // Nueva función para calcular el presupuesto y mostrar resultados
-        function calculateBudget() {
-          const { destiny, budget, acomodation, transport, food } = getValues();
-  
-          let expenses = parseInt(acomodation) + parseInt(transport) + parseInt(food);
-          let balance = budget - expenses;
-  
-          UI(destiny, budget, balance);
-          balanceColours();
-        }
-    </Script>
-  </body>
+       <button id="restart-button">Restart Game</button>
+       <button id="reset-score-button">Reset Score</button>
+    <div>
+    <script src="script.js"></script>
+</body>
 </html>
+
