@@ -1,45 +1,84 @@
-body {
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  .navbar {
+   margin: -2.3em 0 3em; 
+  }
+  h2 {
+    text-align: center;  
+  }
+  
+  .main {
+    width: 100vw;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100vh;
-    margin: 0;
-    background-color: #282c34;
-    color: #61dafb;
-    font-family: 'Arial', sans-serif;
-}
-
-.board {
-    display: grid;
-    grid-template-columns: repeat(3, 100px);
-    gap: 4px;
-}
-
-.cell {
-    width: 100px;
-    height: 100px;
-    background-color: #61dafb;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 24px;
+  }
+  form {
+    text-align: center;
+    width: 70%;
+    background-color: #efefef;
+    padding: 40px;
+    color: #fff;
+    border-radius: 20px;
+  }
+  form input::placeholder {
+    width: 15em;
+    margin: 3px;
+    height: 2em;
+    color: #6c757d;
+  }
+  form .btn {
+    margin: 2em 1em;
+    width: 60%;
+    height: 40px;
+    text-transform: uppercase;
+    color: #fff;
+    letter-spacing: 2px;
+    border-radius: 20px;
+    border: none;
     cursor: pointer;
-}
-
-.cell:hover {
-    background-color: #4682b4;
-}
-
-.winner-cell {
-    background-color: #90ee90; /* Light Green */
-}
-
-#turn-display,
-#score-display {
-    margin: 10px 0;
-}
-
-button {
-    margin-top: 10px;
-}
+  }
+  .icons {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 1em;
+  
+  }
+  .fas {
+    font-size: 2.5em;  
+    border-radius: 50%;
+    padding: 40px;
+  
+  }
+  .fa-plane {
+    color: #206fb4;
+  }
+  .fa-wallet {
+    color: #993a31;
+  }
+  .fa-money-bill-wave-alt{
+    color: #218da5;
+  }
+  
+  .container-data {
+    display: flex;
+    justify-content: space-around;
+    margin-top: -1em;
+  }
+  
+  .container-data h6 {
+    text-align: center;
+  }
+  
+  .red {
+    color: #eb2308;
+  }
+  
+  .green {
+    color: #00a088;
+  }
